@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.bg-image {
+    background-size: cover;
+    background-position: center;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
