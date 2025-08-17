@@ -44,8 +44,22 @@
         <th>Acciones</th>
       </tr>
     </thead>
+
     <tbody id="tablaClientes">
+      
       <!-- Filas de la tabla cargadas dinámicamente con JavaScript -->
+       <tr>
+        <td>Juan Pérez</td>
+        <td>juanperez@example.com</td>
+        <td>Cancún</td>
+        <td>2</td>
+        <td>2023-12-01</td>
+          <td>
+                <button class="btn btn-warning btn-sm" onclick="alert('Acción para editar no programada')">✏️</button>
+                <button class="btn btn-danger btn-sm" onclick="alert('Acción para eliminar no programada')">🗑️</button>
+          </td>
+      </tr>
+
     </tbody>
   </table>
    <!-- Botón para exportar la tabla a TXT -->
