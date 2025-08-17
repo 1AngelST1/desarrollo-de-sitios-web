@@ -11,3 +11,9 @@ body {
     height: 200px;
     object-fit: cover;
 }
+
+/* Ajuste uniforme para imágenes del carrusel */
+.carousel-item  {
+    height: 500px;      /* ajusta según el diseño */
+    object-fit: cover;  /* mantiene proporción y recorta lo que sobra */
+}

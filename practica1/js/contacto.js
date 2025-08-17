@@ -11,6 +11,8 @@
             let nombre = document.getElementById("nombre").value.trim();
             let email = document.getElementById("email").value.trim();
             let mensaje = document.getElementById("mensaje").value.trim();
+            if(!mensaje) mensaje = "Sin mensaje";
+
 
             // --- Guardar mensaje en localStorage ---
             let mensajes = JSON.parse(localStorage.getItem("mensajes")) || [];
@@ -33,5 +35,7 @@
         // para visualizar los datos en el navegador por medio de consola (localStorage)
         //JSON.parse(localStorage.getItem("mensajes")));
         //JSON.parse(localStorage.getItem("clientes"))
-
+        // para eliminar los datos
+       //localStorage.removeItem("mensajes"); 
+       // localStorage.clear();
     }
