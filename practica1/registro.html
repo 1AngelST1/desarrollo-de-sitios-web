@@ -1,87 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro - Agencia de Viajes Express</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registro - Agencia de Viajes Express</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  
+  <body>
 
-<!-- Navbar: barra de navegación superior -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Agencia de Viajes Express</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link active" href="registro.html">Registro</a></li>
-        <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- Navbar: barra de navegación superior -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Agencia de Viajes Express</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link active" href="registro.html">Registro</a></li>
+            <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<!-- Sección del formulario de registro -->
-<div class="container mt-4">
-  <h2 class="text-center">Registro de Cliente</h2>
-  <!-- Formulario principal -->
-  <form id="formRegistro" class="mt-3">
-    <!-- Campo de nombre completo -->
-    <div class="mb-3">
-      <label for="nombre" class="form-label">Nombre completo</label>
-      <input type="text" class="form-control" id="nombre" required>
-    </div>
-    <!-- Campo de correo electronico -->
-    <div class="mb-3">
-      <label for="email" class="form-label">Correo electrónico</label>
-      <input type="email" class="form-control" id="email" required>
-    </div>
-   <!-- Selección de destino de interés -->
-    <div class="mb-3">
-      <label for="destino" class="form-label">Destino de interés</label>
-      <select id="destino" class="form-select" required>
-        <option value="">Selecciona un destino</option>
-        <option>Cancún All-Inclusive</option>
-        <option>Europa en 15 días</option>
-        <option>Experiencia en Nueva York</option>
-        <option>Safari en África</option>
-        <option>Maravillas de Asia</option>
-        <option>Ruta por Sudamérica</option>
-        <option>Islas del Caribe</option>
-        <option>Desierto de Dubái</option>
-        <option>Canadá y sus paisajes</option>
-        <option>Ruta Maya México</option>
-      </select>
+    <!-- Sección del formulario de registro -->
+    
+    <div class="container mt-4">
+      <h2 class="text-center">Registro de Cliente</h2>
+      <!-- Formulario principal -->
+      <form id="formRegistro" class="mt-3">
+        <!-- Campo de nombre completo -->
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <!-- Campo de correo electronico -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+      <!-- Selección de destino de interés -->
+        <div class="mb-3">
+          <label for="destino" class="form-label">Destino de interés</label>
+          <select id="destino" class="form-select" required>
+            <option value="">Selecciona un destino</option>
+            <option>Cancún All-Inclusive</option>
+            <option>Europa en 15 días</option>
+            <option>Experiencia en Nueva York</option>
+            <option>Safari en África</option>
+            <option>Maravillas de Asia</option>
+            <option>Ruta por Sudamérica</option>
+            <option>Islas del Caribe</option>
+            <option>Desierto de Dubái</option>
+            <option>Canadá y sus paisajes</option>
+            <option>Ruta Maya México</option>
+          </select>
+        </div>
+
+        <!-- Número de personas -->
+        <div class="mb-3">
+          <label for="personas" class="form-label">Número de personas</label>
+          <input type="number" class="form-control" id="personas" required>
+        </div>
+        <!-- Fecha tentativa del viaje -->
+        <div class="mb-3">
+          <label for="fecha" class="form-label">Fecha tentativa de viaje</label>
+          <input type="date" class="form-control" id="fecha" required>
+        </div>
+        <!-- Comentarios adicionales -->
+        <div class="mb-3">
+          <label for="comentarios" class="form-label">Comentarios adicionales</label>
+          <textarea id="comentarios" class="form-control" rows="3"></textarea>
+        </div>
+        <!-- Botón de envío del formulario -->
+        <button type="submit" class="btn btn-primary">Registrar</button>
+      </form>
     </div>
 
-    <!-- Número de personas -->
-    <div class="mb-3">
-      <label for="personas" class="form-label">Número de personas</label>
-      <input type="number" class="form-control" id="personas" required>
-    </div>
-    <!-- Fecha tentativa del viaje -->
-    <div class="mb-3">
-      <label for="fecha" class="form-label">Fecha tentativa de viaje</label>
-      <input type="date" class="form-control" id="fecha" required>
-    </div>
-     <!-- Comentarios adicionales -->
-    <div class="mb-3">
-      <label for="comentarios" class="form-label">Comentarios adicionales</label>
-      <textarea id="comentarios" class="form-control" rows="3"></textarea>
-    </div>
-    <!-- Botón de envío del formulario -->
-    <button type="submit" class="btn btn-primary">Registrar</button>
-  </form>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/registro.js"></script>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/registro.js"></script>
+  </body>
 </html>

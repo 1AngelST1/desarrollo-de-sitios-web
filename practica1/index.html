@@ -37,7 +37,7 @@
 </nav>
 
 <!-- Banner principal de la página -->
-<header class="bg-image text-white text-center d-flex align-items-center" style="background-image: url('img/banner.jpg'); height: 60vh;">
+<header id="banner" class="bg-image text-white text-center d-flex align-items-center">
   <div class="container">
     <!-- Título principal y subtítulo -->
     <h1 class="display-4 text-black">Explora el mundo con nosotros</h1>
@@ -48,33 +48,41 @@
   </div>
 </header>
 
+
 <!-- Carrusel de destinos destacados -->
 <div id="carouselDestinos" class="carousel slide mt-4 container" data-bs-ride="carousel">
+  
   <div class="carousel-inner">
+    
     <div class="carousel-item active">
-      <!-- Primer destino (activo por defecto) -->
       <img src="img/cancun.jpg" class="d-block w-100" alt="Cancún">
     </div>
+    
     <div class="carousel-item">
       <img src="img/europa.jpg" class="d-block w-100" alt="Europa">
     </div>
+    
     <div class="carousel-item">
       <img src="img/NuevaYork.jpg" class="d-block w-100" alt="Nueva York">
     </div>
+    
     <div class="carousel-item">
       <img src="img/ruta maya.jpeg" class="d-block w-100" alt="maya mexico">
-  </div>
-  <div class="carousel-item">
+    </div>
+  
+    <div class="carousel-item">
       <img src="img/islas del caribe.jpeg" class="d-block w-100" alt="Islas del Caribe">
-  </div>
+    </div>
   
    <!-- Controles de navegación del carrusel -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestinos" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselDestinos" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestinos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+  
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDestinos" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
 </div>
 
 <!-- Sección "Sobre nosotros" -->
@@ -125,7 +133,11 @@
 </section>
 
 
+
+
 <!-- Script de Bootstrap para componentes interactivos (como el navbar y carrusel) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 </html>

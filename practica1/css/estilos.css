@@ -1,19 +1,186 @@
+/* ==========================
+   Estilos Generales
+========================== */
 body {
-    font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
 }
 
-.bg-image {
-    background-size: cover;
-    background-position: center;
+/* ==========================
+   Navbar
+========================== */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.card img {
-    height: 200px;
-    object-fit: cover;
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-/* Ajuste uniforme para imágenes del carrusel */
-.carousel-item  {
-    height: 500px;      /* ajusta según el diseño */
-    object-fit: cover;  /* mantiene proporción y recorta lo que sobra */
+.nav-link {
+  transition: color 0.3s ease;
 }
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* ==========================
+   Banner principal
+========================== */
+#banner {
+  min-height: 60vh;              
+  background-image: url('../img/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Oscurece el fondo con un degradado */
+#banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+}
+
+/* Texto del banner siempre visible */
+#banner h1,
+#banner p {
+  color: #fff !important; /* texto blanco */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* sombra para contraste */
+  position: relative;
+  z-index: 2; /* sobre el degradado */
+}
+
+/* Botón destacado */
+#banner .btn {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  padding: 12px 28px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+/* ==========================
+   Carrusel imágenes uniformes
+========================== */
+.carousel-item img {
+  height: 250px;        /* altura fija */
+  object-fit: cover;    /* recorta sin deformar */
+  width: 100%;
+}
+
+/* ==========================
+   Botones
+========================== */
+.btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #0077b6;
+  border-color: #0077b6;
+}
+
+.btn-primary:hover {
+  background-color: #005f86;
+  border-color: #005f86;
+}
+
+.btn-success {
+  background-color: #0077b6;
+  border-color: #0077b6;
+}
+
+.btn-success:hover {
+  background-color: #005f86;
+  border-color: #005f86;
+}
+
+/* ==========================
+   Cards (Servicios, Valores)
+========================== */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  color: #0077b6;
+  font-weight: bold;
+}
+
+/* ==========================
+   Sección "Sobre nosotros"
+========================== */
+section h2 {
+  font-weight: bold;
+  color: #0077b6;
+}
+
+section p.lead {
+  color: #555;
+}
+
+/* ==========================
+   Tabla de clientes
+========================== */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: #0077b6 !important;
+  color: white !important;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* ==========================
+   Formulario
+========================== */
+form label {
+  font-weight: 500;
+  color: #333;
+}
+
+form input, form select, form textarea {
+  border-radius: 8px;
+}
+
+/* ==========================
+   Alertas (Contacto)
+========================== */
+#alertaContacto .alert {
+  border-radius: 12px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+
+

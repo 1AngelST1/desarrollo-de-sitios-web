@@ -22,11 +22,9 @@
             
              // Inserta un mensaje de éxito dentro del div "alertaContacto"
             document.getElementById("alertaContacto").innerHTML = `
-                <div class="alert alert-success d-flex align-items-center" role="alert">
-                    <i class="bi bi-check-circle-fill me-2"></i>
-                    ¡Mensaje enviado exitosamente!
-                </div>
-            `;
+               <div class="alert alert-success" role="alert">
+                        <i class="bi bi-check-circle-fill"></i> ¡Mensaje enviado exitosamente!
+                </div>`;
 
             // Limpia los campos del formulario
             formContacto.reset();
