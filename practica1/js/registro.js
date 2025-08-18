@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Debes seleccionar un destino de interés.");
                 return;
             }
+
             // Personas: número entero entre 1 y 20
             if (!/^\d+$/.test(personas) || parseInt(personas) <= 0 || parseInt(personas) > 20) {
                 alert("El número de personas debe ser un número entre 1 y 20.");
@@ -51,6 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("La fecha debe ser futura.");
                 return;
             }
+
+            // Comentarios: máximo 200 caracteres
+            if (comentarios.length > 200) {
+                alert("Los comentarios no pueden exceder los 200 caracteres.");
+                return;
+            }
+            // Si no se escribió comentario, asigna "Sin comentarios"
+            if (!comentarios) comentarios = "Sin comentarios";
 
             // Crea un objeto cliente con los datos ingresados
             let cliente = { nombre, email, destino, personas, fecha, comentarios };

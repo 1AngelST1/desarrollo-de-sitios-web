@@ -30,12 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Evento click para exportar los clientes a un archivo TXT
     exportarTxt.addEventListener("click", () => {
-         // Convierte cada cliente en una línea de texto con sus datos separados
-        let contenido = clientes.map(c => 
-            `Nombre: ${c.nombre}, Email: ${c.email}, Destino: ${c.destino}, Personas: ${c.personas}, Fecha: ${c.fecha}, Comentarios: ${c.comentarios}`
-        ).join("\n");// Une todas las líneas con un salto de línea
+        // Selecciona todas las filas dentro del tbody
+        let filas = document.querySelectorAll("#tablaClientes tr");
+        let contenido = "";
 
-   // Crea un objeto Blob con el contenido y tipo "text/plain" para crear un archivo de texto
+        filas.forEach(fila => {
+            let columnas = fila.querySelectorAll("td");
+            // Armamos la línea con los valores de cada columna
+            contenido += `Nombre: ${columnas[0].textContent}, Email: ${columnas[1].textContent}, Destino: ${columnas[2].textContent}, Personas: ${columnas[3].textContent}, Fecha: ${columnas[4].textContent}\n`;
+        });
+        // Crea un objeto Blob con el contenido y tipo "text/plain" para crear un archivo de texto
         let blob = new Blob([contenido], { type: "text/plain" });
 
         // Crea un enlace temporal para descargar el archivo

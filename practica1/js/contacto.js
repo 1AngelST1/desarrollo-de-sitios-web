@@ -43,7 +43,14 @@
                     </div>`;
                 return;
             }
-
+            // mensaje no mayor a 200 caracteres
+            if (mensaje.length > 200) {
+                alertaDiv.innerHTML = `
+                    <div class="alert alert-warning" role="alert">
+                        <i class="bi bi-chat-dots-fill"></i> El mensaje no puede exceder los 200 caracteres.
+                    </div>`;
+                return;
+            }
             // Si no se escribió mensaje, asigna "Sin mensaje"
             if (!mensaje) mensaje = "Sin mensaje";
 
