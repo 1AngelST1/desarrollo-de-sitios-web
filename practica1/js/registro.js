@@ -19,11 +19,37 @@ document.addEventListener("DOMContentLoaded", () => {
             let fecha = document.getElementById("fecha").value;
             let comentarios = document.getElementById("comentarios").value.trim();
 
-            // Validación fecha futura
-            let hoy = new Date().toISOString().split("T")[0];// Obtiene la fecha actual en formato YYYY-MM-DD
-             if (fecha <= hoy) {
-                alert("La fecha debe ser futura."); // Mensaje de error si la fecha no es válida
-                return; // Detiene la ejecución
+            // --- VALIDACIONES ---
+            // Nombre: mínimo 3 caracteres, solo letras y espacios
+            const regexNombre = /^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{3,}$/;
+            if (!regexNombre.test(nombre)) {
+                alert("El nombre debe tener al menos 3 letras y solo contener caracteres válidos.");
+                return;
+            }
+
+            // Email: formato válido
+            const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regexEmail.test(email)) {
+                alert("Por favor, ingresa un correo electrónico válido.");
+                return;
+            }
+
+            // Destino: obligatorio
+            if (destino === "") {
+                alert("Debes seleccionar un destino de interés.");
+                return;
+            }
+            // Personas: número entero entre 1 y 20
+            if (!/^\d+$/.test(personas) || parseInt(personas) <= 0 || parseInt(personas) > 20) {
+                alert("El número de personas debe ser un número entre 1 y 20.");
+                return;
+            }
+
+            // Fecha futura
+            let hoy = new Date().toISOString().split("T")[0];
+            if (fecha <= hoy) {
+                alert("La fecha debe ser futura.");
+                return;
             }
 
             // Crea un objeto cliente con los datos ingresados

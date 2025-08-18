@@ -11,7 +11,41 @@
             let nombre = document.getElementById("nombre").value.trim();
             let email = document.getElementById("email").value.trim();
             let mensaje = document.getElementById("mensaje").value.trim();
-            if(!mensaje) mensaje = "Sin mensaje";
+            
+            const alertaDiv = document.getElementById("alertaContacto");
+
+            // --- VALIDACIONES ---
+            // Nombre: mínimo 3 letras y solo caracteres válidos
+            const regexNombre = /^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]{3,}$/;
+            if (!regexNombre.test(nombre)) {
+                alertaDiv.innerHTML = `
+                    <div class="alert alert-danger" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill"></i> El nombre debe tener al menos 3 letras y solo contener caracteres válidos.
+                    </div>`;
+                return;
+            }
+
+            // Email: formato válido
+            const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regexEmail.test(email)) {
+                alertaDiv.innerHTML = `
+                    <div class="alert alert-danger" role="alert">
+                        <i class="bi bi-envelope-exclamation-fill"></i> Ingresa un correo electrónico válido.
+                    </div>`;
+                return;
+            }
+
+            // Mensaje: opcional, pero si existe debe tener al menos 5 caracteres
+            if (mensaje && mensaje.length < 5) {
+                alertaDiv.innerHTML = `
+                    <div class="alert alert-warning" role="alert">
+                        <i class="bi bi-chat-dots-fill"></i> El mensaje debe tener al menos 5 caracteres si decides escribir algo.
+                    </div>`;
+                return;
+            }
+
+            // Si no se escribió mensaje, asigna "Sin mensaje"
+            if (!mensaje) mensaje = "Sin mensaje";
 
 
             // --- Guardar mensaje en localStorage ---
